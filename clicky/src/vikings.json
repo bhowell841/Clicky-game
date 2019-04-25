@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "image": "https://www.menshairstylestoday.com/wp-content/uploads/2017/04/Ragnar-Lothbrok-Hair-Vikings-Haircut-and-Beard.jpg",
+        "character": "Ragnar"
+    },
+    {
+        "id": 2,
+        "image": "https://i.pinimg.com/originals/55/83/fa/5583fa864cc341aab74ffa8863149749.jpg",
+        "character": "Rollo"
+    },
+    {
+        "id": 3,
+        "image": "https://img.zergnet.com/1853001_300.jpg",
+        "character": "Lagertha"
+    },
+    {
+        "id": 4,
+        "image": "https://tribzap2it.files.wordpress.com/2017/02/floki-vikings-history.jpg?w=246&h=300",
+        "character": "Floki"
+    },
+    {
+        "id": 5,
+        "image": "https://vignette.wikia.nocookie.net/vikings/images/9/95/Bjorn_Eisenseite.jpg/revision/latest?cb=20180604124201&path-prefix=de",
+        "character": "Bjorn"
+    },
+    {
+        "id": 6,
+        "image": "https://vignette.wikia.nocookie.net/vikingstv/images/a/a7/Harald5b.png/revision/latest?cb=20190125121413",
+        "character": "Harald"
+    },
+    {
+        "id": 7,
+        "image": "https://66.media.tumblr.com/f2be61797b27d21e52937a8e439c3403/tumblr_p45r881GPE1tyhl08o5_250.png",
+        "character": "Halfdan"
+    },
+    {
+        "id": 8,
+        "image": "https://vignette.wikia.nocookie.net/vikingstv/images/5/5d/Ivar_HD_5x10.jpg/revision/latest?cb=20180126055221",
+        "character": "Ivar"
+    },
+    {
+        "id": 9,
+        "image": "https://www.bleedingcool.com/wp-content/uploads/2018/11/torvi.vikings.5b.georgiahirst-e1543004908770-350x348.jpg?x70969",
+        "character": "Torvi"
+    },
+    {
+        "id": 10,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs5qajSlMYXfb14mOyTWiFJejhyVqITkNQpR3KVUaHdTCzyJRH",
+        "character": "Ubbe"
+    },
+    {
+        "id": 11,
+        "image": "http://rabirajkhadka.me/wp-content/uploads/2018/05/hvitserk-vikings-war-viking-reddit.jpg",
+        "character": "Hvitserk"
+    },
+    {
+        "id": 12,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2r-qOdtO3KUxpZf0GnXF3YkxDcLPvs9_j4sB0wys2mwVfqnvMbQ",
+        "character": "Astrid"
+    }
+]
