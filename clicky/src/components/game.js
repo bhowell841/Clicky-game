@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import vikings from '../viking.json'
+import vikings from '../vikings.json'
 import CharacterCard from './CharacterCard'
 import Navbar from './Navbar'
 
