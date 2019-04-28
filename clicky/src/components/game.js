@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard'
 import Navbar from './Navbar'
 
 const style = {
-    backgroundColor: 'silver'
+    backgroundColor: 'black'
 }
 
 class Game extends Component {
@@ -31,7 +31,7 @@ class Game extends Component {
             return false;
         }
 
-        const checkIfClicked = this.state.clickedVikings.indexOf(event.target.id) > -1;
+        let checkIfClicked = this.state.clickedVikings.indexOf(event.target.id) > -1;
 
         if(checkIfClicked) {
             this.handleLoss(event.target.alt);

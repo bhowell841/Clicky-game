@@ -1,8 +1,12 @@
 .navbar {
     font-size: 35px;
-    background-color: #5c93ed !important;
+    background-color: silver !important;
 }
 
 .navbar a {
     font-size: 30px;
+}
+
+.navbar-text {
+    
 }
