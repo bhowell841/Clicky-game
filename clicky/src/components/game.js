@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard'
 import Navbar from './Navbar'
 
 const style = {
-    backgroundColor: '#aac7f7'
+    backgroundColor: 'silver'
 }
 
 class Game extends Component {
@@ -14,7 +14,7 @@ class Game extends Component {
         vikings: vikings,
         clickedVikings: [],
         unselectedViking: vikings.map(vikings=> {
-            return vikings.name
+            return vikings.character
         })
     };
 
@@ -39,7 +39,7 @@ class Game extends Component {
             let index = this.state.unselectedVikings.indexOf(event.target.alt)
             this.setState({
                 score: this.state.score +1,
-                clickedFlags: this.state.clickedVikings.concat(event.target.id),
+                clickedVikings: this.state.clickedVikings.concat(event.target.id),
                 unselectedVikings: this.state.unselectedVikings.splice(index,1)
             }, () => {
                 if (this.state.score === 12) {
@@ -49,13 +49,13 @@ class Game extends Component {
         }
     };
 
-    handleLoss = name => {
-        alert('You lose.\nYou already guessed ' + name + '\nYou missed ' + this.state.unselectedVikings.join(', '))
+    handleLoss = character => {
+        alert('You lose.\nYou already guessed ' + character + '\nYou missed ' + this.state.unselectedVikings.join(', '))
         this.resetGame()
     }
 
     handleWin = () => {
-        alert('You Win! You got all the flags!')
+        alert('You Win! You picked all the Vikings!')
         this.resetGame()
     }
 
@@ -65,7 +65,7 @@ class Game extends Component {
             vikings: vikings,
             clickedVikings: [],
             unselectedvikings: vikings.map(vikings=> {
-                return vikings.name
+                return vikings.character
             })
         })
     }
@@ -76,7 +76,7 @@ class Game extends Component {
                 <Navbar score={this.state.score} />
                 <div className='container'> 
                     {this.shuffle(this.state.vikings).map(vikings => {
-                    return <CharacterCard id={vikings.id} key={vikings.id} image={vikings.image} country={vikings.name} handleClick={this.handleClick} />
+                    return <CharacterCard id={vikings.id} key={vikings.id} image={vikings.image} character={vikings.character} handleClick={this.handleClick} />
                 })}
                 </div>
             </div>
