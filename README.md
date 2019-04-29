@@ -11,12 +11,12 @@ Memory game with React. This assignment require you to break up your application
   <li>CSS</li>
 </ul>
 
-## Website
+## Website:
 https://protected-depths-23490.herokuapp.com
 <br />
 
 
-## Walkthrough
+## Walkthrough:
 
 ### Screenshot of the images you can click.
 
