@@ -1,0 +1,14 @@
+.card {
+    width: 13rem;
+    display: inline-block;
+    margin: 20px;
+}
+
+.card:hover{
+    /* AGGGGHHHHHHHH */
+}
+
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+}
