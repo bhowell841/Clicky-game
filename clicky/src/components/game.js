@@ -3,17 +3,14 @@ import vikings from '../vikings.json'
 import CharacterCard from './CharacterCard'
 import Navbar from './Navbar'
 
-const style = {
-    backgroundColor: 'black'
-}
 
 class Game extends Component {
     
     state = {
         score: 0,
         vikings: vikings,
-        clickedVikings: [],
-        unselectedViking: vikings.map(vikings=> {
+        selectedVikings: [],
+        unselectedVikings: vikings.map(vikings=> {
             return vikings.character
         })
     };
@@ -31,7 +28,7 @@ class Game extends Component {
             return false;
         }
 
-        let checkIfClicked = this.state.clickedVikings.indexOf(event.target.id) > -1;
+        let checkIfClicked = this.state.selectedVikings.indexOf(event.target.id) > -1;
 
         if(checkIfClicked) {
             this.handleLoss(event.target.alt);
@@ -39,7 +36,7 @@ class Game extends Component {
             let index = this.state.unselectedVikings.indexOf(event.target.alt)
             this.setState({
                 score: this.state.score +1,
-                clickedVikings: this.state.clickedVikings.concat(event.target.id),
+                selectedVikings: this.state.selectedVikings.concat(event.target.id),
                 unselectedVikings: this.state.unselectedVikings.splice(index,1)
             }, () => {
                 if (this.state.score === 12) {
@@ -50,12 +47,13 @@ class Game extends Component {
     };
 
     handleLoss = character => {
-        alert('You lose.\nYou already guessed ' + character + '\nYou missed ' + this.state.unselectedVikings.join(', '))
+        alert('You lose.\nYou already guessed ' + character )
         this.resetGame()
     }
 
     handleWin = () => {
-        alert('You Win! You picked all the Vikings!')
+        alert('You Win! You clicked all the Vikings!')
+
         this.resetGame()
     }
 
@@ -63,7 +61,7 @@ class Game extends Component {
         this.setState({
             score: 0,
             vikings: vikings,
-            clickedVikings: [],
+            selectedVikings: [],
             unselectedvikings: vikings.map(vikings=> {
                 return vikings.character
             })
@@ -72,7 +70,7 @@ class Game extends Component {
 
     render(){
         return (
-            <div style={style}>
+            <div>
                 <Navbar score={this.state.score} />
                 <div className='container'> 
                     {this.shuffle(this.state.vikings).map(vikings => {

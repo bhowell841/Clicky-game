@@ -1,6 +1,7 @@
 .navbar {
     font-size: 35px;
-    background-color: silver !important;
+    background-color: silver;
+    color: black;
 }
 
 .navbar a {
@@ -8,5 +9,5 @@
 }
 
 .navbar-text {
-    
+    color: black;
 }
