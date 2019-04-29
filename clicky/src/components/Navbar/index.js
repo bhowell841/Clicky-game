@@ -10,6 +10,8 @@ const Navbar = props => {
             </a>
             <span className="navbar-text">
                 Score: {props.score}
+                </span>
+                <span className="navbar-text">
                 Top Score: {props.bestScore}
             </span>
         </nav>

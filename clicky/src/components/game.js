@@ -27,6 +27,13 @@ class Game extends Component {
 
 
     handleClick = id => {
+        let score = this.state.score;
+        this.setState({
+            score: score,
+        })
+        if (score >= this.state.bestScore){
+            this.setState({ bestScore: score});
+        }
         if(this.state.score === 12){
             return false;
         }
