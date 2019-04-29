@@ -9,6 +9,7 @@ class Game extends Component {
     state = {
         score: 0,
         bestScore: 0,
+        wins: 0,
         vikings: vikings,
         selectedVikings: [],
         unselectedVikings: vikings.map(vikings=> {
@@ -32,7 +33,7 @@ class Game extends Component {
             score: score,
         })
         if (score >= this.state.bestScore){
-            this.setState({ bestScore: score});
+            this.setState({ bestScore: score + 1});
         }
         if(this.state.score === 12){
             return false;
@@ -69,6 +70,9 @@ class Game extends Component {
     // if you clicked all 12 vikings call the winner alert
     handleWinner = () => {
         alert("You Win! You clicked all the Vikings!")
+        this.setState({
+            wins: this.state.wins +1
+        })
         this.newGame()
         console.log("Winner alert")
     }
@@ -89,7 +93,8 @@ class Game extends Component {
         return (
             <div>
                 <Navbar score={this.state.score} 
-                 bestScore={this.state.bestScore} />
+                 bestScore={this.state.bestScore} 
+                 wins={this.state.wins} />
                 <div className='container'> 
                     {this.shuffle(this.state.vikings).map(vikings => {
                     return <CharacterCard id={vikings.id} key={vikings.id} image={vikings.image} character={vikings.character} handleClick={this.handleClick} />
