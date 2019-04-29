@@ -1,13 +1,10 @@
 .navbar {
-    font-size: 35px;
-    background-color: silver;
-    color: black;
+    font-size: 40px;
+    background-color:none;
 }
 
 .navbar a {
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
 }
 
-.navbar-text {
-    color: black;
-}
