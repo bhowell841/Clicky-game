@@ -9,7 +9,7 @@ const characterCard = props => {
         src={props.image} 
         alt={props.character} 
         id={props.id}
-        onClick={props.handleClick}
+        onClick={()=>{props.handleClick()}}
         />
     </div>
     )

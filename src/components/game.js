@@ -28,13 +28,7 @@ class Game extends Component {
 
 
     handleClick = id => {
-        let score = this.state.score;
-        this.setState({
-            score: score,
-        })
-        if (score >= this.state.bestScore){
-            this.setState({ bestScore: score + 1});
-        }
+        
         if(this.state.score === 12){
             return false;
         }
@@ -45,9 +39,10 @@ class Game extends Component {
             this.handleLoser(id.target.alt);
         } else {
             let index = this.state.unselectedVikings.indexOf(id.target.alt)
+            let score = this.state.score;
             this.setState({
-                score: this.state.score +1,
-                
+                score: score +1,
+                bestScore: score +1>this.state.bestScore ? score+1 : this.state.bestScore,
                 selectedVikings: this.state.selectedVikings.concat(id.target.id),
                 unselectedVikings: this.state.unselectedVikings.splice(index,1)   
             }, 
@@ -90,6 +85,9 @@ class Game extends Component {
     }
     // render the page
     render(){
+        // var style = {
+            // header style: something,
+        // }
         return (
             <div>
                 <Navbar score={this.state.score} 
